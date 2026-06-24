@@ -1,0 +1,163 @@
+urgency:
+  severity: medium
+  patterns:
+    - "act now"
+    - "act immediately"
+    - "immediate action"
+    - "immediate attention"
+    - "urgent"
+    - "urgently"
+    - "within 24 hours"
+    - "within 48 hours"
+    - "expires today"
+    - "expires soon"
+    - "last chance"
+    - "final warning"
+    - "final notice"
+    - "time sensitive"
+    - "limited time"
+    - "don't delay"
+    - "do not delay"
+    - "respond immediately"
+    - "action required"
+    - "pilne"
+    - "natychmiast"
+    - "niezwłocznie"
+    - "ostatnia szansa"
+    - "ostatnie ostrzeżenie"
+    - "nie zwlekaj"
+    - "wymagane działanie"
+
+account_suspension:
+  severity: high
+  patterns:
+    - "account will be suspended"
+    - "account has been suspended"
+    - "account will be closed"
+    - "account has been compromised"
+    - "account will be locked"
+    - "account has been locked"
+    - "account will be terminated"
+    - "account will be deactivated"
+    - "access will be revoked"
+    - "access has been restricted"
+    - "unauthorized access"
+    - "unusual activity"
+    - "suspicious activity"
+    - "security alert"
+    - "security breach"
+    - "konto zostanie zablokowane"
+    - "konto zostało zablokowane"
+    - "konto zostanie zamknięte"
+    - "konto zostało skompromitowane"
+    - "konto zostanie zawieszone"
+    - "nieautoryzowany dostęp"
+    - "podejrzana aktywność"
+
+credential_request:
+  severity: high
+  patterns:
+    - "verify your identity"
+    - "verify your account"
+    - "confirm your identity"
+    - "confirm your account"
+    - "confirm your password"
+    - "confirm your credentials"
+    - "update your password"
+    - "update your information"
+    - "enter your password"
+    - "enter your credentials"
+    - "provide your password"
+    - "provide your credentials"
+    - "sign in to verify"
+    - "log in to verify"
+    - "log in to confirm"
+    - "potwierdź swoje dane"
+    - "potwierdź swoją tożsamość"
+    - "zweryfikuj swoje konto"
+    - "podaj swoje hasło"
+    - "zaktualizuj swoje hasło"
+    - "weryfikacja konta"
+
+payment_request:
+  severity: medium
+  patterns:
+    - "payment is due"
+    - "payment required"
+    - "pay now"
+    - "make a payment"
+    - "wire transfer"
+    - "bank transfer"
+    - "outstanding balance"
+    - "overdue payment"
+    - "invoice attached"
+    - "invoice enclosed"
+    - "see attached invoice"
+    - "process this payment"
+    - "faktura w załączniku"
+    - "dopłata"
+    - "zaległa płatność"
+    - "przelew bankowy"
+    - "opłata wymagana"
+
+gift_card:
+  severity: high
+  patterns:
+    - "gift card"
+    - "gift cards"
+    - "buy gift cards"
+    - "purchase gift cards"
+    - "google play card"
+    - "itunes card"
+    - "steam card"
+    - "amazon gift card"
+    - "send me the codes"
+    - "scratch the back"
+    - "karta podarunkowa"
+    - "karty podarunkowe"
+    - "kup karty"
+
+attachment_request:
+  severity: medium
+  patterns:
+    - "open the attached"
+    - "open the attachment"
+    - "see the attached"
+    - "review the attached"
+    - "download the attached"
+    - "enable macros"
+    - "enable editing"
+    - "enable content"
+    - "otwórz załącznik"
+    - "zobacz załącznik"
+    - "włącz makra"
+    - "włącz edycję"
+
+link_click_request:
+  severity: low
+  patterns:
+    - "click here"
+    - "click the link"
+    - "click below"
+    - "click the button"
+    - "follow this link"
+    - "kliknij tutaj"
+    - "kliknij w link"
+    - "kliknij poniżej"
+
+impersonation_language:
+  severity: medium
+  patterns:
+    - "IT department"
+    - "IT support"
+    - "technical support"
+    - "help desk"
+    - "security team"
+    - "security department"
+    - "billing department"
+    - "human resources"
+    - "dział IT"
+    - "pomoc techniczna"
+    - "dział bezpieczeństwa"
+    - "dział rozliczeń"
+    - "dział kadr"

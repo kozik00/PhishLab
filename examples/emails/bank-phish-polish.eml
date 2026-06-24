@@ -1,0 +1,50 @@
+From: mBank Bezpieczenstwo <bezpieczenstwo@mbank-powiadomienia.pl>
+To: klient@example.com
+Subject: Pilne: Twoje konto mBank wymaga weryfikacji
+Date: Sat, 27 Jan 2024 10:00:00 +0000
+Message-ID: <alert-pl-001@mbank-powiadomienia.pl>
+Reply-To: bezpieczenstwo@mbank-powiadomienia.pl
+Return-Path: <bounce@tani-mailer.xyz>
+Authentication-Results: mx.example.com;
+    spf=fail smtp.mailfrom=mbank-powiadomienia.pl;
+    dkim=none;
+    dmarc=fail header.from=mbank-powiadomienia.pl
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary-mbank"
+
+--boundary-mbank
+Content-Type: text/plain; charset="utf-8"
+
+Szanowny Kliencie,
+
+Wykryto podejrzana aktywnosc na Twoim koncie mBank. Twoje konto zostanie zablokowane jezeli nie zweryfikujesz swoich danych w ciagu 24 godzin.
+
+Kliknij w link ponizej aby potwierdzic swoje dane:
+http://192.168.10.5/mbank-weryfikacja?sesja=xyz789
+
+Weryfikacja konta jest wymagana natychmiast.
+
+Jezeli nie potwierdzisz swoich danych, dostep do konta zostanie zawieszony.
+
+Dzial Bezpieczenstwa mBank
+
+--boundary-mbank
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<div style="background: #00843d; color: white; padding: 15px;">
+<h2>mBank</h2>
+</div>
+<div style="padding: 20px;">
+<p>Szanowny Kliencie,</p>
+<p>Wykryto <b>podejrzana aktywnosc</b> na Twoim koncie mBank. Twoje konto zostanie zablokowane jezeli nie zweryfikujesz swoich danych w ciagu <b>24 godzin</b>.</p>
+<p><a href="http://192.168.10.5/mbank-weryfikacja?sesja=xyz789">https://online.mbank.pl/weryfikacja</a></p>
+<p>Weryfikacja konta jest wymagana <b>natychmiast</b>.</p>
+<p>Jezeli nie potwierdzisz swoich danych, dostep do konta zostanie zawieszony.</p>
+<p>Dzial Bezpieczenstwa mBank</p>
+</div>
+</body>
+</html>
+
+--boundary-mbank--

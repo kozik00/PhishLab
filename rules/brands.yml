@@ -1,0 +1,111 @@
+brands:
+  - domain: microsoft.com
+    name: Microsoft
+    aliases:
+      - outlook.com
+      - live.com
+      - hotmail.com
+      - office365.com
+      - office.com
+
+  - domain: google.com
+    name: Google
+    aliases:
+      - gmail.com
+      - googlemail.com
+      - youtube.com
+
+  - domain: apple.com
+    name: Apple
+    aliases:
+      - icloud.com
+      - me.com
+      - mac.com
+
+  - domain: amazon.com
+    name: Amazon
+    aliases:
+      - amazon.co.uk
+      - amazon.de
+      - amazon.pl
+      - aws.amazon.com
+
+  - domain: paypal.com
+    name: PayPal
+    aliases: []
+
+  - domain: facebook.com
+    name: Facebook
+    aliases:
+      - fb.com
+      - meta.com
+      - instagram.com
+
+  - domain: netflix.com
+    name: Netflix
+    aliases: []
+
+  - domain: linkedin.com
+    name: LinkedIn
+    aliases: []
+
+  - domain: github.com
+    name: GitHub
+    aliases: []
+
+  - domain: twitter.com
+    name: Twitter
+    aliases:
+      - x.com
+
+  - domain: dropbox.com
+    name: Dropbox
+    aliases: []
+
+  - domain: allegro.pl
+    name: Allegro
+    aliases: []
+
+  - domain: inpost.pl
+    name: InPost
+    aliases: []
+
+  - domain: mbank.pl
+    name: mBank
+    aliases: []
+
+  - domain: pko.pl
+    name: PKO BP
+    aliases:
+      - pkobp.pl
+      - ipko.pl
+
+  - domain: ing.pl
+    name: ING Bank
+    aliases: []
+
+  - domain: santander.pl
+    name: Santander
+    aliases: []
+
+  - domain: olx.pl
+    name: OLX
+    aliases: []
+
+  - domain: poczta-polska.pl
+    name: Poczta Polska
+    aliases:
+      - pocztapolska.pl
+
+  - domain: dhl.com
+    name: DHL
+    aliases:
+      - dhl.pl
+
+  - domain: ups.com
+    name: UPS
+    aliases: []
+
+  - domain: fedex.com
+    name: FedEx
+    aliases: []

@@ -1,0 +1,48 @@
+From: Microsoft Security Team <security@micros0ft-alerts.com>
+To: user@example.com
+Subject: URGENT: Your Microsoft Account Has Been Compromised
+Date: Tue, 23 Jan 2024 14:30:00 +0000
+Message-ID: <alert-7829@micros0ft-alerts.com>
+Reply-To: security@micros0ft-alerts.com
+Return-Path: <bounce@cheap-mailer.net>
+Authentication-Results: mx.example.com;
+    spf=fail smtp.mailfrom=micros0ft-alerts.com;
+    dkim=none;
+    dmarc=fail header.from=micros0ft-alerts.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary-ms"
+
+--boundary-ms
+Content-Type: text/plain; charset="utf-8"
+
+Dear Valued Customer,
+
+We have detected unauthorized access to your Microsoft account. Your account will be suspended within 24 hours unless you verify your identity immediately.
+
+Click here to verify: http://192.168.1.50/ms-verify?id=abc123
+
+If you do not act now, you will lose access to all your files, emails, and OneDrive data.
+
+Do NOT ignore this message.
+
+Microsoft Account Security Team
+
+--boundary-ms
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<div style="font-family: Segoe UI, sans-serif;">
+<p>Dear Valued Customer,</p>
+<p>We have detected <b>unauthorized access</b> to your Microsoft account.
+Your account will be <b>suspended within 24 hours</b> unless you verify your identity <b>immediately</b>.</p>
+<p><a href="http://192.168.1.50/ms-verify?id=abc123">https://login.microsoftonline.com/verify</a></p>
+<p><a href="https://bit.ly/ms-verify-now">Verify Your Account Now</a></p>
+<p>If you do not act now, you will lose access to all your files, emails, and OneDrive data.</p>
+<p><b>Do NOT ignore this message.</b></p>
+<p>Microsoft Account Security Team</p>
+</div>
+</body>
+</html>
+
+--boundary-ms--

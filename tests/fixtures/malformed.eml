@@ -1,0 +1,7 @@
+From: broken-sender
+Subject: =?utf-8?B?broken base64?=
+Date: not-a-real-date
+MIME-Version: 1.0
+Content-Type: text/plain
+
+This email has malformed headers and should be parsed without crashing.

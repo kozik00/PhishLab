@@ -1,0 +1,33 @@
+From: Newsletter <news@company-example.com>
+To: reader@example.com
+Subject: Weekly Update
+Date: Tue, 16 Jan 2024 08:00:00 +0000
+Message-ID: <weekly-001@company-example.com>
+Reply-To: noreply@company-example.com
+Return-Path: <bounce@company-example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary-001"
+
+--boundary-001
+Content-Type: text/plain; charset="utf-8"
+
+Weekly Update
+
+Check out our latest articles at https://company-example.com/blog
+
+Thanks,
+The Team
+
+--boundary-001
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<h1>Weekly Update</h1>
+<p>Check out our latest articles:</p>
+<a href="https://company-example.com/blog">Visit our blog</a>
+<p>Thanks,<br>The Team</p>
+</body>
+</html>
+
+--boundary-001--

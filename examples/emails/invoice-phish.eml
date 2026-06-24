@@ -1,0 +1,40 @@
+From: Accounting Department <accounting@supplier-invoices.net>
+To: finance@example.com
+Subject: Invoice #INV-2024-0891 - Payment Due
+Date: Wed, 24 Jan 2024 09:15:00 +0000
+Message-ID: <inv-0891@supplier-invoices.net>
+Reply-To: payments@supplier-invoices.net
+Return-Path: <bounce@supplier-invoices.net>
+Authentication-Results: mx.example.com;
+    spf=softfail smtp.mailfrom=supplier-invoices.net;
+    dkim=none;
+    dmarc=none
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary-inv"
+
+--boundary-inv
+Content-Type: text/plain; charset="utf-8"
+
+Dear Finance Team,
+
+Please find attached the invoice for services rendered in January 2024.
+
+Invoice Number: INV-2024-0891
+Amount Due: $4,750.00
+Payment Due Date: January 31, 2024
+
+Please process this payment immediately to avoid late fees.
+
+If you have any questions, contact our billing department.
+
+Best regards,
+Accounting Department
+
+--boundary-inv
+Content-Type: application/vnd.ms-excel; name="Invoice-INV-2024-0891.xlsm"
+Content-Disposition: attachment; filename="Invoice-INV-2024-0891.xlsm"
+Content-Transfer-Encoding: base64
+
+UEsDBBQAAAAIAAAAAACKIYOwFAAA
+
+--boundary-inv--

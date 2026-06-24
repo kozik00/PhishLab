@@ -1,0 +1,4 @@
+Content-Type: text/plain; charset="utf-8"
+
+This email is missing most standard headers like From, To, Subject, Date, and Message-ID.
+It should still be parsed without errors.

@@ -1,0 +1,26 @@
+From: CEO John Mitchell <ceo.mitchell@gmail.com>
+To: assistant@example.com
+Subject: Quick Favor Needed
+Date: Sun, 28 Jan 2024 15:30:00 +0000
+Message-ID: <favor-001@mail.gmail.com>
+Return-Path: <ceo.mitchell@gmail.com>
+Authentication-Results: mx.example.com;
+    spf=pass smtp.mailfrom=gmail.com;
+    dkim=pass header.d=gmail.com;
+    dmarc=pass header.from=gmail.com
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hi,
+
+I'm in a meeting right now and can't make a call. I need you to do me a quick favor.
+
+Can you purchase 5 Google Play gift cards, $100 each? It's for a client appreciation event this afternoon. I need them urgently.
+
+Once you buy them, scratch the back and send me the codes via email. I'll reimburse you right after my meeting.
+
+Please don't mention this to anyone else yet - it's a surprise for the team.
+
+Thanks,
+John Mitchell
+CEO

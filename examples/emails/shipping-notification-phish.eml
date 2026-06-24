@@ -1,0 +1,56 @@
+From: DHL Express <tracking@dhl-delivery-notice.com>
+To: customer@example.com
+Subject: Your package could not be delivered - Action Required
+Date: Fri, 26 Jan 2024 11:00:00 +0000
+Message-ID: <pkg-notice-442@dhl-delivery-notice.com>
+Reply-To: support@dhl-delivery-notice.com
+Return-Path: <bounce@mass-mailer.xyz>
+Authentication-Results: mx.example.com;
+    spf=fail smtp.mailfrom=dhl-delivery-notice.com;
+    dkim=none;
+    dmarc=fail header.from=dhl-delivery-notice.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary-dhl"
+
+--boundary-dhl
+Content-Type: text/plain; charset="utf-8"
+
+Dear Customer,
+
+We attempted to deliver your package but were unable to complete the delivery.
+
+Tracking Number: DHL-9284751038
+Status: Delivery Failed - Address Verification Required
+
+You must confirm your delivery address and pay a small redelivery fee of $1.99.
+
+Click here to reschedule: https://t.ly/dhl-redeliver
+
+If you do not act within 48 hours, your package will be returned to sender.
+
+DHL Express Customer Service
+
+--boundary-dhl
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<div style="font-family: Arial, sans-serif; background: #ffc800; padding: 20px;">
+<h2 style="color: #d40511;">DHL Express</h2>
+</div>
+<div style="padding: 20px;">
+<p>Dear Customer,</p>
+<p>We attempted to deliver your package but were unable to complete the delivery.</p>
+<table>
+<tr><td><b>Tracking Number:</b></td><td>DHL-9284751038</td></tr>
+<tr><td><b>Status:</b></td><td>Delivery Failed - Address Verification Required</td></tr>
+</table>
+<p>You must confirm your delivery address and pay a small redelivery fee of <b>$1.99</b>.</p>
+<p><a href="https://t.ly/dhl-redeliver" style="background: #d40511; color: white; padding: 10px 20px; text-decoration: none;">Reschedule Delivery</a></p>
+<p>If you do not act within <b>48 hours</b>, your package will be returned to sender.</p>
+<p>DHL Express Customer Service</p>
+</div>
+</body>
+</html>
+
+--boundary-dhl--

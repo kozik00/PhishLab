@@ -1,0 +1,59 @@
+executable:
+  severity: critical
+  extensions:
+    - .exe
+    - .scr
+    - .pif
+    - .com
+    - .bat
+    - .cmd
+    - .msi
+    - .msp
+    - .mst
+
+script:
+  severity: high
+  extensions:
+    - .js
+    - .jse
+    - .vbs
+    - .vbe
+    - .wsf
+    - .wsh
+    - .ps1
+    - .psm1
+    - .psd1
+    - .hta
+
+macro_capable:
+  severity: high
+  extensions:
+    - .docm
+    - .dotm
+    - .xlsm
+    - .xltm
+    - .pptm
+    - .potm
+    - .ppam
+    - .sldm
+
+archive:
+  severity: medium
+  extensions:
+    - .iso
+    - .img
+    - .vhd
+    - .vhdx
+
+other_risky:
+  severity: medium
+  extensions:
+    - .jar
+    - .cpl
+    - .inf
+    - .reg
+    - .lnk
+    - .url
+    - .application
+    - .appref-ms
+    - .settingcontent-ms

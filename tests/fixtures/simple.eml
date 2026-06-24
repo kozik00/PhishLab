@@ -1,0 +1,14 @@
+From: John Doe <john.doe@example.com>
+To: jane.smith@example.com
+Subject: Meeting Tomorrow
+Date: Mon, 15 Jan 2024 10:30:00 +0000
+Message-ID: <abc123@mail.example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hi Jane,
+
+Just a reminder about our meeting tomorrow at 10am.
+
+Best regards,
+John

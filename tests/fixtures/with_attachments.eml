@@ -1,0 +1,29 @@
+From: Sender <sender@example.com>
+To: recipient@example.com
+Subject: Document Attached
+Date: Wed, 17 Jan 2024 14:00:00 +0000
+Message-ID: <attach-001@mail.example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary-attach"
+
+--boundary-attach
+Content-Type: text/plain; charset="utf-8"
+
+Please find the document attached.
+
+--boundary-attach
+Content-Type: application/pdf; name="report.pdf"
+Content-Disposition: attachment; filename="report.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5k
+b2JqCg==
+
+--boundary-attach
+Content-Type: application/octet-stream; name="invoice.pdf.exe"
+Content-Disposition: attachment; filename="invoice.pdf.exe"
+Content-Transfer-Encoding: base64
+
+TVqQAAMAAAAEAAAA
+
+--boundary-attach--

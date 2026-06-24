@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    volumes:
+      - phishlab-data:/app/data
+      - phishlab-uploads:/app/uploads
+    environment:
+      - PHISHLAB_HOST=0.0.0.0
+      - PHISHLAB_PORT=8000
+      - PHISHLAB_DB_PATH=/app/data/phishlab.db
+      - PHISHLAB_UPLOAD_DIR=/app/uploads
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: apps/dashboard/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  phishlab-data:
+  phishlab-uploads:

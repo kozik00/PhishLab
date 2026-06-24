@@ -1,0 +1,53 @@
+From: TechWeekly <newsletter@techweekly-example.com>
+To: subscriber@example.com
+Subject: This Week in Tech - Issue #142
+Date: Mon, 22 Jan 2024 08:00:00 +0000
+Message-ID: <issue-142@mail.techweekly-example.com>
+Reply-To: newsletter@techweekly-example.com
+Return-Path: <bounce@techweekly-example.com>
+Authentication-Results: mx.example.com;
+    spf=pass smtp.mailfrom=techweekly-example.com;
+    dkim=pass header.d=techweekly-example.com;
+    dmarc=pass header.from=techweekly-example.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary-news"
+
+--boundary-news
+Content-Type: text/plain; charset="utf-8"
+
+This Week in Tech - Issue #142
+
+Hi there,
+
+Here are this week's top stories:
+
+1. New open-source framework released for web development
+2. Major cloud provider announces price reductions
+3. Security researchers discover novel vulnerability class
+
+Read more at https://techweekly-example.com/issue/142
+
+You're receiving this because you subscribed at techweekly-example.com.
+Unsubscribe: https://techweekly-example.com/unsubscribe
+
+--boundary-news
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<h1>This Week in Tech - Issue #142</h1>
+<p>Hi there,</p>
+<p>Here are this week's top stories:</p>
+<ol>
+<li>New open-source framework released for web development</li>
+<li>Major cloud provider announces price reductions</li>
+<li>Security researchers discover novel vulnerability class</li>
+</ol>
+<p><a href="https://techweekly-example.com/issue/142">Read the full issue</a></p>
+<hr>
+<p style="font-size:small">You're receiving this because you subscribed at techweekly-example.com.<br>
+<a href="https://techweekly-example.com/unsubscribe">Unsubscribe</a></p>
+</body>
+</html>
+
+--boundary-news--

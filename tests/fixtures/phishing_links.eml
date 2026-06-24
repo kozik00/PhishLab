@@ -1,0 +1,43 @@
+From: Microsoft Security <security@micros0ft-alert.com>
+To: victim@example.com
+Subject: Urgent: Your Account Has Been Compromised
+Date: Thu, 18 Jan 2024 09:00:00 +0000
+Message-ID: <phish-001@micros0ft-alert.com>
+Reply-To: security@micros0ft-alert.com
+Return-Path: <bounce@shady-mailer.net>
+Authentication-Results: mx.example.com;
+    spf=fail smtp.mailfrom=micros0ft-alert.com;
+    dkim=none;
+    dmarc=fail header.from=micros0ft-alert.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="boundary-phish"
+
+--boundary-phish
+Content-Type: text/plain; charset="utf-8"
+
+Dear Customer,
+
+Your Microsoft account has been compromised. You must verify your identity immediately or your account will be suspended within 24 hours.
+
+Click here to verify: http://192.168.1.100/verify?token=abc123
+
+If you do not act now, you will lose access to all your files and emails.
+
+Microsoft Security Team
+
+--boundary-phish
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<p>Dear Customer,</p>
+<p>Your <b>Microsoft account</b> has been compromised. You must verify your identity
+<b>immediately</b> or your account will be suspended within 24 hours.</p>
+<p><a href="http://192.168.1.100/verify?token=abc123">https://login.microsoft.com/verify</a></p>
+<p><a href="https://bit.ly/fake-ms-verify">Verify Your Account Now</a></p>
+<p>If you do not act now, you will lose access to all your files and emails.</p>
+<p>Microsoft Security Team</p>
+</body>
+</html>
+
+--boundary-phish--

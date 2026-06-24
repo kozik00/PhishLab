@@ -1,0 +1,181 @@
+samples:
+  - id: benign-newsletter
+    title: "Tech Weekly Newsletter"
+    description: "A weekly technology newsletter from a subscribed mailing list."
+    eml_filename: benign-newsletter.eml
+    is_phishing: false
+    difficulty: beginner
+    explanation: >
+      This is a legitimate newsletter. All authentication checks pass (SPF, DKIM, DMARC).
+      The Reply-To and Return-Path are on the same domain as the From address.
+      Links point to the newsletter's own domain with HTTPS. There is no urgency language,
+      no credential requests, and no suspicious attachments. The unsubscribe link is present,
+      which is standard for legitimate mailing lists.
+    indicators:
+      - "SPF, DKIM, and DMARC all pass"
+      - "Reply-To and Return-Path match the From domain"
+      - "All links use HTTPS and point to the newsletter domain"
+      - "No urgency language or threats"
+      - "Unsubscribe link present"
+    tags:
+      - legitimate
+      - newsletter
+
+  - id: fake-microsoft-alert
+    title: "Microsoft Account Security Alert"
+    description: "An email claiming your Microsoft account has been compromised and requires immediate verification."
+    eml_filename: fake-microsoft-alert.eml
+    is_phishing: true
+    difficulty: beginner
+    explanation: >
+      This is a phishing email impersonating Microsoft. The sender domain is 'micros0ft-alerts.com'
+      (note the zero instead of 'o') — a typosquatting domain. The Return-Path goes to
+      'cheap-mailer.net', a completely different domain. SPF and DMARC both fail.
+      The main link displays 'login.microsoftonline.com' but actually points to an IP address
+      (192.168.1.50). There is a shortened URL (bit.ly). The email uses heavy urgency
+      language ('immediately', 'within 24 hours', 'Do NOT ignore').
+    indicators:
+      - "Sender domain uses typosquatting: micros0ft-alerts.com (zero instead of 'o')"
+      - "Return-Path domain (cheap-mailer.net) differs from From domain"
+      - "SPF fail, DKIM none, DMARC fail"
+      - "Link text shows microsoftonline.com but href is an IP address"
+      - "Contains a shortened URL (bit.ly)"
+      - "Urgency language: 'immediately', 'within 24 hours'"
+      - "Account suspension threat"
+    tags:
+      - phishing
+      - brand-impersonation
+      - typosquatting
+      - credential-phishing
+
+  - id: invoice-phish
+    title: "Invoice Payment Request"
+    description: "An email with an attached invoice requesting payment for services."
+    eml_filename: invoice-phish.eml
+    is_phishing: true
+    difficulty: intermediate
+    explanation: >
+      This email uses a fake invoice to deliver a macro-enabled Excel file (.xlsm).
+      The sender domain 'supplier-invoices.net' is generic and not associated with any
+      known supplier. SPF returns softfail and there is no DKIM or DMARC. The attachment
+      uses a macro-capable format (.xlsm), which can execute malicious code when macros
+      are enabled. The email pressures immediate payment to 'avoid late fees'. Legitimate
+      invoices come from known suppliers with proper authentication.
+    indicators:
+      - "Unknown sender domain (supplier-invoices.net)"
+      - "SPF softfail, no DKIM, no DMARC"
+      - "Macro-capable attachment (.xlsm) — can execute code"
+      - "Payment pressure: 'process this payment immediately'"
+      - "Reply-To differs from From address"
+    tags:
+      - phishing
+      - invoice-scam
+      - malicious-attachment
+      - macro
+
+  - id: password-reset-legit
+    title: "GitHub Password Reset"
+    description: "A password reset email from GitHub."
+    eml_filename: password-reset-legit.eml
+    is_phishing: false
+    difficulty: intermediate
+    explanation: >
+      This is a legitimate password reset email from GitHub. All authentication checks pass
+      (SPF, DKIM, DMARC). The From, Reply-To, and Return-Path all use github.com. The
+      reset link points to github.com with HTTPS. The email explicitly states that if you
+      did not request the reset, you can safely ignore it — a sign of legitimate communication.
+      There is no urgency pressure or threats. Note that while it mentions a 24-hour expiry
+      for the link, this is standard security practice, not a pressure tactic.
+    indicators:
+      - "SPF, DKIM, and DMARC all pass"
+      - "From, Reply-To, and Return-Path all use github.com"
+      - "Reset link uses HTTPS and points to github.com"
+      - "Includes 'if you did not request this, ignore it' — legitimate pattern"
+      - "No threatening language or account suspension threats"
+    tags:
+      - legitimate
+      - password-reset
+
+  - id: shipping-notification-phish
+    title: "DHL Failed Delivery Notice"
+    description: "An email claiming a package delivery failed and requesting address verification and a small fee."
+    eml_filename: shipping-notification-phish.eml
+    is_phishing: true
+    difficulty: beginner
+    explanation: >
+      This email impersonates DHL Express. The sender domain 'dhl-delivery-notice.com' is not
+      an official DHL domain (legitimate DHL emails come from dhl.com). The Return-Path goes to
+      'mass-mailer.xyz'. SPF and DMARC both fail. The link uses a URL shortener (t.ly) to hide
+      the actual destination. The email creates urgency ('within 48 hours') and requests a small
+      payment ($1.99) — a common technique to harvest credit card information. Legitimate
+      delivery services do not request payment via email links.
+    indicators:
+      - "Sender domain is not official DHL (dhl-delivery-notice.com vs dhl.com)"
+      - "Return-Path domain (mass-mailer.xyz) is unrelated"
+      - "SPF fail, DKIM none, DMARC fail"
+      - "Uses URL shortener (t.ly) to hide destination"
+      - "Requests payment via email — DHL does not do this"
+      - "Urgency: 'within 48 hours'"
+    tags:
+      - phishing
+      - brand-impersonation
+      - shipping-scam
+      - payment-scam
+
+  - id: bank-phish-polish
+    title: "mBank Security Alert (Polish)"
+    description: "A Polish-language email claiming suspicious activity on your mBank account."
+    eml_filename: bank-phish-polish.eml
+    is_phishing: true
+    difficulty: intermediate
+    explanation: >
+      This is a Polish-language phishing email impersonating mBank. The sender domain
+      'mbank-powiadomienia.pl' is not the official mBank domain (mbank.pl). The Return-Path
+      goes to 'tani-mailer.xyz'. SPF and DMARC both fail. The link text shows
+      'online.mbank.pl/weryfikacja' but the actual href is an IP address (192.168.10.5).
+      The email uses Polish urgency language ('natychmiast', 'w ciagu 24 godzin') and
+      threatens account suspension ('konto zostanie zablokowane'). It requests credential
+      verification ('potwierdzic swoje dane').
+    indicators:
+      - "Sender domain is not official mBank (mbank-powiadomienia.pl vs mbank.pl)"
+      - "Return-Path domain (tani-mailer.xyz) is unrelated"
+      - "SPF fail, DKIM none, DMARC fail"
+      - "Link text shows mbank.pl but href is an IP address"
+      - "Polish urgency language: 'natychmiast', 'w ciagu 24 godzin'"
+      - "Account suspension threat: 'konto zostanie zablokowane'"
+      - "Credential request: 'potwierdzic swoje dane'"
+    tags:
+      - phishing
+      - brand-impersonation
+      - polish
+      - banking
+      - credential-phishing
+
+  - id: gift-card-scam
+    title: "CEO Gift Card Request"
+    description: "An email apparently from the CEO asking you to urgently buy gift cards."
+    eml_filename: gift-card-scam.eml
+    is_phishing: true
+    difficulty: beginner
+    explanation: >
+      This is a Business Email Compromise (BEC) / gift card scam. While the email passes
+      SPF, DKIM, and DMARC (because it genuinely was sent from Gmail), the attack relies on
+      social engineering rather than technical spoofing. The display name claims to be the CEO
+      but the actual address is a personal Gmail account. The email requests gift card purchases
+      with specific instructions to send the codes — a hallmark of gift card scams. The urgency
+      ('urgently', 'can't make a call'), secrecy ('don't mention this to anyone'), and the
+      request to use personal funds with a promise of reimbursement are all red flags.
+      Legitimate executives do not request gift card purchases via personal email.
+    indicators:
+      - "Display name claims CEO title but uses personal Gmail address"
+      - "Requests gift card purchases — classic scam technique"
+      - "Asks to send codes via email"
+      - "Urgency: 'urgently', 'I need them urgently'"
+      - "Secrecy: 'don't mention this to anyone'"
+      - "Request to use personal funds with promise of reimbursement"
+      - "Cannot verify by phone: 'I'm in a meeting, can't make a call'"
+    tags:
+      - phishing
+      - bec
+      - gift-card-scam
+      - social-engineering
