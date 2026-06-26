@@ -58,12 +58,14 @@ PhishLab/
 │   ├── scoring/                # Risk scoring engine
 │   ├── reports/                # Jinja2 report generation
 │   ├── training/               # Training samples and quiz logic
+│   ├── integrations/           # VirusTotal, Safe Browsing (opt-in)
 │   └── utils/                  # Redaction, URL parsing, text helpers
+├── packages/cli/               # Click CLI tool
 ├── apps/api/                   # FastAPI REST API
-├── apps/dashboard/             # React dashboard
+├── apps/dashboard/             # React + Vite + TypeScript dashboard
 ├── rules/                      # YAML rules (content patterns, brands, extensions)
 ├── examples/emails/            # Sample .eml files for demo and training
-├── tests/                      # pytest test suite with .eml fixtures
+├── tests/                      # pytest test suite (230 tests)
 └── docs/                       # Architecture, threat model, scoring, security docs
 ```
 
@@ -106,6 +108,9 @@ source .venv/bin/activate
 
 # Install the core library with dev dependencies
 pip install -e "packages/core[dev]"
+
+# Install the CLI tool
+pip install -e "packages/cli"
 ```
 
 ### Configuration
@@ -116,6 +121,37 @@ cp .env.example .env
 ```
 
 ## Usage
+
+### CLI Tool
+
+```bash
+# Analyze an email
+phishlab analyze email.eml
+
+# Analyze with verbose findings
+phishlab analyze -v email.eml
+
+# Output as JSON
+phishlab analyze --json email.eml
+
+# Generate a report
+phishlab report email.eml -f html -o report.html
+
+# Inspect email metadata
+phishlab inspect email.eml
+
+# Scan a directory
+phishlab scan ./mailbox/ -t 60
+
+# List training samples
+phishlab training
+
+# Take the quiz
+phishlab quiz --all
+
+# Enrich with VirusTotal (opt-in, requires API key)
+phishlab enrich email.eml --vt-key YOUR_KEY
+```
 
 ### Analyzing an Email (Python)
 
@@ -189,12 +225,20 @@ PhishLab is designed with strict safety boundaries:
 
 See [docs/security-notes.md](docs/security-notes.md) for the full security document.
 
+## External Integrations (v0.2, opt-in)
+
+PhishLab can optionally query external threat intelligence APIs. These are **disabled by default** and require explicit API keys.
+
+| Integration | API Key Env Var | What is sent externally |
+|---|---|---|
+| VirusTotal | `VIRUSTOTAL_API_KEY` | Domain names, file SHA256 hashes |
+| Google Safe Browsing | `GOOGLE_SAFE_BROWSING_KEY` | URLs |
+
+No email content, headers, or bodies are ever sent externally.
+
 ## Limitations
 
 - Does not perform live DKIM cryptographic verification (parses reported results only)
-- Does not fetch URLs or check link destinations
-- Does not scan attachments for malware (metadata-only analysis)
-- Does not use external threat intelligence APIs in the MVP
 - Content analysis uses pattern matching, not NLP/ML
 - Polish language support is best-effort pattern matching
 
@@ -223,9 +267,9 @@ See [docs/security-notes.md](docs/security-notes.md) for the full security docum
 - [x] v0.1 - FastAPI REST API
 - [x] v0.1 - React dashboard
 - [x] v0.1 - Docker Compose deployment
-- [ ] v0.2 - CLI tool
-- [ ] v0.2 - VirusTotal integration (opt-in)
-- [ ] v0.2 - URL reputation checking (opt-in)
+- [x] v0.2 - CLI tool
+- [x] v0.2 - VirusTotal integration (opt-in)
+- [x] v0.2 - URL reputation checking (opt-in)
 - [ ] v0.2 - Playwright E2E tests
 - [ ] v0.3 - PostgreSQL support
 - [ ] v0.3 - Multi-language content analysis

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phishlab-cli"
+version = "0.2.0"
+description = "CLI tool for PhishLab email threat analysis"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "phishlab",
+    "click>=8.1,<9.0",
+    "rich>=13.0,<14.0",
+]
+
+[project.scripts]
+phishlab = "phishlab_cli.main:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["phishlab_cli"]
